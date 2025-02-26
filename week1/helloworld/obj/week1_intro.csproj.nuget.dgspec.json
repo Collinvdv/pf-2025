@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/collinvandervorst/School/2024-2025/PF/_template/week1_intro.csproj": {}
+    "/Users/collinvandervorst/School/2024-2025/PF/week1/helloworld/week1_intro.csproj": {}
   },
   "projects": {
-    "/Users/collinvandervorst/School/2024-2025/PF/_template/week1_intro.csproj": {
+    "/Users/collinvandervorst/School/2024-2025/PF/week1/helloworld/week1_intro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/collinvandervorst/School/2024-2025/PF/_template/week1_intro.csproj",
+        "projectUniqueName": "/Users/collinvandervorst/School/2024-2025/PF/week1/helloworld/week1_intro.csproj",
         "projectName": "week1_intro",
-        "projectPath": "/Users/collinvandervorst/School/2024-2025/PF/_template/week1_intro.csproj",
+        "projectPath": "/Users/collinvandervorst/School/2024-2025/PF/week1/helloworld/week1_intro.csproj",
         "packagesPath": "/Users/collinvandervorst/.nuget/packages/",
-        "outputPath": "/Users/collinvandervorst/School/2024-2025/PF/_template/obj/",
+        "outputPath": "/Users/collinvandervorst/School/2024-2025/PF/week1/helloworld/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/collinvandervorst/.nuget/NuGet/NuGet.Config"

@@ -175,38 +175,49 @@ internal class Program
         // int[] grades =  {5, 10, 15, 20};
         // Console.WriteLine(grades[^2]);
 
-        int[][] temperatures = {
-            new int[] {3, 5, 7},      // January
-            new int[] {1, 4},      // February
-            new int[] {6, 10, 12},    // March
-            new int[] {9, 14, 15},    // April
-            new int[] {12, 18, 20},   // May
-            new int[] {15, 22, 25},   // June
-            new int[] {18, 25, 30},   // July
-            new int[] {17, 23, 28},   // August
-            new int[] {13, 19, 24, 40},   // September
-            new int[] {9, 14, 18},    // October
-            new int[] {5, 10, 12},    // November
-            new int[] {2, 6, 9}       // December
-        };
+        // int[][] temperatures = {
+        //     new int[] {3, 5, 7},      // January
+        //     new int[] {1, 4},      // February
+        //     new int[] {6, 10, 12},    // March
+        //     new int[] {9, 14, 15},    // April
+        //     new int[] {12, 18, 20},   // May
+        //     new int[] {15, 22, 25},   // June
+        //     new int[] {18, 25, 30},   // July
+        //     new int[] {17, 23, 28},   // August
+        //     new int[] {13, 19, 24, 40},   // September
+        //     new int[] {9, 14, 18},    // October
+        //     new int[] {5, 10, 12},    // November
+        //     new int[] {2, 6, 9}       // December
+        // };
 
-        for (int monthIndex = 0; monthIndex < temperatures.Length; monthIndex++) {
-            Console.WriteLine(monthIndex + " : " + temperatures[monthIndex].Length);
-            int sumTemp = 0;
-            double amountOfTemp = temperatures[monthIndex].Length;
-            for (int temperatureIndex = 0 ; temperatureIndex< amountOfTemp; temperatureIndex++) {
-                sumTemp += temperatures[monthIndex][temperatureIndex];
-            }
+        // for (int monthIndex = 0; monthIndex < temperatures.Length; monthIndex++) {
+        //     Console.WriteLine(monthIndex + " : " + temperatures[monthIndex].Length);
+        //     int sumTemp = 0;
+        //     double amountOfTemp = temperatures[monthIndex].Length;
+        //     for (int temperatureIndex = 0 ; temperatureIndex< amountOfTemp; temperatureIndex++) {
+        //         sumTemp += temperatures[monthIndex][temperatureIndex];
+        //     }
 
-            double avgTemp  = sumTemp / amountOfTemp;
+        //     double avgTemp  = sumTemp / amountOfTemp;
 
-            string[] months = {
-                "January", "February", "March", "April",
-                "May", "June", "July", "August",
-                "September", "October", "November", "December"
-            };
+        //     string[] months = {
+        //         "January", "February", "March", "April",
+        //         "May", "June", "July", "August",
+        //         "September", "October", "November", "December"
+        //     };
 
-            Console.WriteLine(months[monthIndex] + " " + avgTemp);
+        //     Console.WriteLine(months[monthIndex] + " " + avgTemp);
+        // }
+        int number = 3;
+
+        if (number > 0) {
+            number = number * -1;
+            Console.WriteLine(number);
+        } else if (number == 0) {
+            Console.WriteLine("error converting");
+        } else {
+            Console.WriteLine(number);
         }
+        
     }
 }

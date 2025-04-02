@@ -161,22 +161,93 @@ internal class Program
         //     }
         // }
 
-        foreach (string numberAsString in numbersAsString) {
-            try {
-                int number = Convert.ToInt16(numberAsString);
+        // foreach (string numberAsString in numbersAsString) {
+        //     try {
+        //         int number = Convert.ToInt16(numberAsString);
 
-                if (number >= 0) {
-                    positiveNumbers += number + " ";
-                } else {
-                    negativeNumbers += number + " ";
-                }
-            } catch(FormatException) {
-                Console.WriteLine("Not a number");
-            }
-        }
+        //         if (number >= 0) {
+        //             positiveNumbers += number + " ";
+        //         } else {
+        //             negativeNumbers += number + " ";
+        //         }
+        //     } catch(FormatException) {
+        //         Console.WriteLine("Not a number");
+        //     }
+        // }
         
-        Console.WriteLine(positiveNumbers);
-        Console.WriteLine(negativeNumbers);
+        // Console.WriteLine(positiveNumbers);
+        // Console.WriteLine(negativeNumbers);
+
+
+        // 5
+        //  ~0 ~ ~ ~ 1 zero 4 tilde
+        // 0 0 ~ ~ ~ 2 zero 3 tilde 
+        // 0 0 0 ~ ~ 3 zero 2 tilde
+        // 0 0 0 0 ~ 4 zero 1 tilde
+        // 0 0 0 0 0 5 zero 0 tilde
+
+        // int amountOfRows = Convert.ToInt16(Console.ReadLine());
+        // for (int i = 1; i <= amountOfRows; i++) {
+        //     int amountOfZeros = i;
+        //     int amountOfTildes = amountOfRows - i;
+
+        //     string row = ""; 
+
+        //     // Zero 
+        //     for (int zero = 1; zero <= amountOfZeros; zero++) {
+        //         row += "0";
+        //     }
+
+        //     // Tildes
+        //     for (int tilde = 1; tilde <= amountOfTildes; tilde++) {
+        //         row += "~";
+        //     }
+
+        //     // Reverse row 
+        //     string rowReverse = "";
+
+        //     for (int charIndex = row.Length -1; charIndex >= 0; charIndex--) {
+        //         rowReverse += row[charIndex];
+        //     }
+
+        //     Console.WriteLine(row + rowReverse);
+        // }
+
+        // amount of rows = 5 
+        // 0 ~ ~ ~ ~ ~ ~ ~ ~ 0 zero 2 tildes 8 
+        
+        // 0 0 ~ ~ ~ ~ ~ ~ 0 0 zero 4 tildes 6
+        // 2 zeros 6 tildes 2 zero 
+        // 
+        // 0 0 0 ~ ~ ~ ~ 0 0 0 zero 6 tildes 4
+        // 0 0 0 0 ~ ~ 0 0 0 0 zero 8 tildes 2
+        // 0 0 0 0 0 0 0 0 0 0 zero 10 tildes 0
+
+        int amountOfRows = Convert.ToInt16(Console.ReadLine()); 
+        int amountOfColumns = amountOfRows * 2; 
+
+        for (int x = 2; x <= amountOfColumns; x+=2) {
+            int amountOfZeros = x;
+            int amountOfTildes = amountOfColumns - x;
+
+            string row = "";
+            // initial zeros 
+            for (int initialZero = 0; initialZero < (amountOfZeros / 2); initialZero++) {
+                row += "0";
+            }
+
+            // Tilde
+            for (int tilde = 0; tilde < amountOfTildes; tilde++) {
+                row += "~";
+            }
+
+            // initial zeros 
+            for (int endZero = 0; endZero < (amountOfZeros / 2); endZero++) {
+                row += "0";
+            }
+
+            Console.WriteLine(row);
+        }
         
 
     }

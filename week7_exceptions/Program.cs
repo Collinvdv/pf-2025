@@ -138,11 +138,11 @@ internal class Program
         //     Console.WriteLine(e.Message);
         // }
 
-        string input = "3 collin 0 2 28 -1 -17 288 -99 -4";
-        string[] numbersAsString = input.Split(' ');
-        string negativeNumbers = "";
-        string positiveNumbers = "";
-        string notNumbers = "";
+        // string input = "3 collin 0 2 28 -1 -17 288 -99 -4";
+        // string[] numbersAsString = input.Split(' ');
+        // string negativeNumbers = "";
+        // string positiveNumbers = "";
+        // string notNumbers = "";
 
         // Loop 
         // foreach (string numberAsString in numbersAsString) {
@@ -180,7 +180,7 @@ internal class Program
 
 
         // 5
-        //  ~0 ~ ~ ~ 1 zero 4 tilde
+        // 0 ~ ~ ~ 1 zero 4 tilde
         // 0 0 ~ ~ ~ 2 zero 3 tilde 
         // 0 0 0 ~ ~ 3 zero 2 tilde
         // 0 0 0 0 ~ 4 zero 1 tilde
@@ -223,32 +223,100 @@ internal class Program
         // 0 0 0 0 ~ ~ 0 0 0 0 zero 8 tildes 2
         // 0 0 0 0 0 0 0 0 0 0 zero 10 tildes 0
 
-        int amountOfRows = Convert.ToInt16(Console.ReadLine()); 
-        int amountOfColumns = amountOfRows * 2; 
+        // int amountOfRows = Convert.ToInt16(Console.ReadLine()); 
+        // int amountOfColumns = amountOfRows * 2; 
 
-        for (int x = 2; x <= amountOfColumns; x+=2) {
-            int amountOfZeros = x;
-            int amountOfTildes = amountOfColumns - x;
+        // for (int x = 2; x <= amountOfColumns; x+=2) {
+        //     int amountOfZeros = x;
+        //     int amountOfTildes = amountOfColumns - x;
 
-            string row = "";
-            // initial zeros 
-            for (int initialZero = 0; initialZero < (amountOfZeros / 2); initialZero++) {
-                row += "0";
-            }
+        //     string row = "";
+        //     // initial zeros 
+        //     for (int initialZero = 0; initialZero < (amountOfZeros / 2); initialZero++) {
+        //         row += "0";
+        //     }
 
-            // Tilde
-            for (int tilde = 0; tilde < amountOfTildes; tilde++) {
-                row += "~";
-            }
+        //     // Tilde
+        //     for (int tilde = 0; tilde < amountOfTildes; tilde++) {
+        //         row += "~";
+        //     }
 
-            // initial zeros 
-            for (int endZero = 0; endZero < (amountOfZeros / 2); endZero++) {
-                row += "0";
-            }
+        //     // initial zeros 
+        //     for (int endZero = 0; endZero < (amountOfZeros / 2); endZero++) {
+        //         row += "0";
+        //     }
 
-            Console.WriteLine(row);
-        }
+        //     Console.WriteLine(row);
+        // }
+
+        // I: 4
+        //*
+        //**
+        //***
+        //****
         
+        // string input = Console.ReadLine();
+        // int numberOfRows;
+        // Boolean isNumber = int.TryParse(input, out numberOfRows);
+
+        // if (isNumber) {
+        //     for (int row = 1; row <= numberOfRows; row++) {
+        //         string output = ""; 
+
+        //         for (int column = 0; column < row; column ++) {
+        //             output += "*";
+        //         }
+        //         Console.WriteLine(output);
+        //     }
+        // } else {
+        //     Console.WriteLine("No number validation");
+        // }
+
+
+        // 111001 = 57
+        // 2 ^ 5 = 32 * 1 = 32 -> charIndex 0, powerTo = 5
+        // 2 ^ 4 = 16 * 1 = 16
+        // 2 ^ 3 = 8 * 1 = 8
+        // 2 ^ 2 = 4 * 0 = 0
+        // 2 ^ 1 = 2 * 0 = 0
+        // 2 ^ 0 = 1 * 1 = 1
+        // 57 (32 + 16 + 8 + 1)
+        // I only want to this when the binary code has only 0 and 1 init (so maybe just a regex)
+
+
+        // 1101, 4 numbers 
+
+        // 2 ^ 3 = 8  * 1 = 8 
+        // 2 ^ 2 = 4  * 1 = 4
+        // 2 ^ 1 = 2 * 0 = 0 
+        // 2 ^ 0 = 1  * 1  = 1
+        // 1101 = 13;
+
+
+        // I = 1101 
+        // O = 13
+
+        // I = 1404
+        // O = not a binary code
+
+        string binaryCode = "1411001"; 
+        Regex rx = new Regex(@"^[01]+$");
+
+        if (rx.IsMatch(binaryCode)) {
+            double result = 0;
+
+            for (int i = 0; i < binaryCode.Length; i++) {
+                // 2 ^ 3
+                if (binaryCode[i] == '1') {
+                    double number = Math.Pow(2, (binaryCode.Length - 1) - i);
+                    result += number;
+                }
+            }
+
+            Console.WriteLine(result);
+        } else {
+            Console.WriteLine("Not a binary number");
+        }
 
     }
 }

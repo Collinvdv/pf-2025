@@ -5,10 +5,10 @@ internal class Pokemon {
     public string Name { get; set; }
     public int Health { get; set; }
     public int Power { get; set; }
-    public int CatchRate { get; set; }
+    public double CatchRate { get; set; }
 
     // constructor
-    public Pokemon(string _name, int _power, int _catchRate)
+    public Pokemon(string _name, int _power, double _catchRate)
     {
         this.Name = _name;
         this.Power = _power;

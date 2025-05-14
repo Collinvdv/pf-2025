@@ -16,7 +16,7 @@ internal class Pokeball {
 
     // methods
     public void IsOwnedByTrainer() {
-        this.IsOwned = true;
+        // this.IsOwned = true;
     }
 
 }

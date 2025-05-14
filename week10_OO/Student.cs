@@ -1,14 +1,10 @@
 namespace WeekOO;
-internal class Student {
+internal class Student: Person {
     // Properties, information (prop + tab)
-    public String Name { get; set; }
-    private int Age { get; set; }
 
     // Constructor, asking information when creating an instance (ctor + tab)
-    public Student(string _name, int _age)
+    public Student(string _name, int _age) : base(_name, _age)
     {
-        this.Name = _name;
-        this.Age = _age;
     }
 
     // Methods

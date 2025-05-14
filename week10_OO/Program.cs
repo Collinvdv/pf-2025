@@ -14,9 +14,10 @@ internal class Program
         Teacher teacher2 = new Teacher("Mr. Awesome", 34);
         Teacher teacher3 = new Teacher("Mrs. Old", 70);
 
-
+        teacher1.BirthdayTime();
         teacher1.Teach();
         teacher2.Teach();
-        teacher3.Teach();
+
+
     }
 }

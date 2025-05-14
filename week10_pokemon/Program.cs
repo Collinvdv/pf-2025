@@ -14,6 +14,6 @@ internal class Program
         Pokeball ball1 = new Pokeball("Normal", 0.2);
         Pokeball ball2 = new Pokeball("Special", 0.9);
         Pokeball ball3 = new Pokeball("Advanced", 0.7);
-        Pokeball ball4 = new Pokeball("Normal", 0.2);
+        Pokeball ball4 = new Pokeball("Master", 1);
     }
 }

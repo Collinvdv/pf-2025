@@ -14,13 +14,15 @@ internal class Program
         Teacher teacher2 = new Teacher("Mr. Awesome", 34);
         Teacher teacher3 = new Teacher("Mrs. Old", 70);
 
-        teacher1.BirthdayTime();
-        teacher1.Teach();
-        teacher2.Teach();
-
+        // Courses
         Course pf = new Course("xxx", "programming fundamentals", teacher1);
         Course beingAwesome = new Course("xxo", "How to be awesome in 13 weeks", teacher2);
-        Console.WriteLine(pf.CourseTeacher.Name);
+
+        student1.Subscribe(pf);
+        student1.Subscribe(beingAwesome);
+        student2.Subscribe(pf);
+
+        student1.PrintCourses();
 
     }
 }

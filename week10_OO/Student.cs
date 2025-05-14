@@ -19,4 +19,10 @@ internal class Student: Person {
     public void Subscribe(Course course) {
         this.Courses.Add(course);
     }
+
+    public void PrintCourses() {
+        foreach(Course course in this.Courses) {
+            Console.WriteLine(course.Name);
+        }
+    }
 }

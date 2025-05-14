@@ -18,6 +18,9 @@ internal class Program
         teacher1.Teach();
         teacher2.Teach();
 
+        Course pf = new Course("xxx", "programming fundamentals", teacher1);
+        Course beingAwesome = new Course("xxo", "How to be awesome in 13 weeks", teacher2);
+        Console.WriteLine(pf.CourseTeacher.Name);
 
     }
 }

@@ -15,5 +15,19 @@ internal class Program
         Pokeball ball2 = new Pokeball("Special", 0.9);
         Pokeball ball3 = new Pokeball("Advanced", 0.7);
         Pokeball ball4 = new Pokeball("Master", 1);
+
+        // Trainers 
+        Trainer ash = new Trainer("Ash");
+        Trainer brook = new Trainer("Brook");
+        Trainer misty = new Trainer("Misty");
+
+        // Add pokebals 
+        ash.AddPokeball(ball1);
+        ash.AddPokeball(ball2);
+        brook.AddPokeball(ball3);
+        misty.AddPokeball(ball4);
+        ash.AddPokeball(ball3);
+
+        ash.ListPokeballs();
     }
 }

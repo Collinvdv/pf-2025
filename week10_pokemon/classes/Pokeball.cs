@@ -9,6 +9,7 @@ internal class Pokeball {
     // constructor
     public Pokeball(string _name, double _catchRate)
     {
+        // eee
         this.Name = _name;
         this.CatchRate = _catchRate;
         this.IsOwned = false;

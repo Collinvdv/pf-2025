@@ -22,13 +22,7 @@ internal class Program
         Trainer misty = new Trainer("Misty");
 
         // Add pokebals 
-        for(int i = 0; i < 10; i ++) {
-
-            ash.AddPokeball(ball4);
-            ash.CatchPokemon(pokemon2);
-        }
-
-       
-       
+        ash.AddPokeball(ball4);
+        ash.CatchPokemon(pokemon2);
     }
 }

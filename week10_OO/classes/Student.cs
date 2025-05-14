@@ -6,7 +6,7 @@ internal class Student: Person {
     public List<Course> Courses { get; set; }
 
     // Constructor, asking information when creating an instance (ctor + tab)
-    public Student(string _name, int _age) : base(_name, _age)
+    public Student(string _name, int _age, Gender _gender = Gender.Male) : base(_name, _age, _gender)
     {
         this.Courses = new List<Course>();
     }

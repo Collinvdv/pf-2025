@@ -7,7 +7,9 @@ internal class Program
     private static void Main() {
         // Students
         Student student1 = new Student("Youssef", 20);
-        Student student2 = new Student("Regina", 19);
+        Student student2 = new Student("Regina", 19, Gender.Female);
+
+        Console.WriteLine(student2.Gender);
 
         // Teachers
         Teacher teacher1 = new Teacher("Mr. Van der Vorst", 34, "u38595");

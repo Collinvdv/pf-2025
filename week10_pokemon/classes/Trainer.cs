@@ -17,8 +17,9 @@ internal class Trainer {
     // Methods 
     public void AddPokeball(Pokeball _ball) {
         if (_ball.IsOwned) {
-            Console.WriteLine(" YOU CAN NOT STEAL THE BALL!");
+            Console.WriteLine($"{this.Name} CAN NOT STEAL THE BALL!");
         } else {
+            Console.WriteLine($"{this.Name} added the ball {_ball.Name}");
             this.Pokeballs.Add(_ball);
             _ball.IsOwnedByTrainer();
         }

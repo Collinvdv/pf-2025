@@ -20,6 +20,10 @@ internal class Teacher {
 
     // Methods 
     public void Teach() {
-        Console.WriteLine($"{this.Name} is teaching.");
+        if (this.Age > 67) {
+             Console.WriteLine($"{this.Name} is retired.");
+        } else {
+            Console.WriteLine($"{this.Name} is teaching.");
+        }
     }
 }

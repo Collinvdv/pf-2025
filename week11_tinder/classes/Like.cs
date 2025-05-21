@@ -15,5 +15,7 @@ internal class Like
         this.Receiver = _receiver;
         this.Sender = _sender;
         this.IsLiked = _isliked;
+
+        // comment
     }
 }
